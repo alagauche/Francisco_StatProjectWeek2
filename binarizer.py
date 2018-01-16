@@ -12,10 +12,10 @@ def binarize(item, validation_cutoff):
 
  
 # global variables
-validation_cutoff = 0.8
+validation_cutoff = 0.9
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-subm = pd.read_csv(dir_path + '/' + 'f_submission.csv')
+subm = pd.read_csv(dir_path + '/' + 'submission.csv')
 
 subm = subm.applymap(lambda x: binarize(x, validation_cutoff))
 subm.to_csv('submission_binarized.csv', index=False)
