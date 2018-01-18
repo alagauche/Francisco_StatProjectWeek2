@@ -1,11 +1,13 @@
 import pandas as pd, numpy as np
 import os, math
 
-def binarize(item, validation_cutoff):
+def binarize(item, validation_cutoff, maybe_counter):
     if item <= 1:
         if item >= validation_cutoff:         
             return math.ceil(item)         
         else:
+            if item > maybe:
+                maybe_counter += 1
             return math.floor(item)
     else:
         return item
