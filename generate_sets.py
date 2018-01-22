@@ -30,7 +30,7 @@ def generate_sets(training_set, train_percent, set_count):
 dir_path = os.path.dirname(os.path.realpath(__file__))
 training_percent = 0.7
 total_percent = 0.5
-set_number = "1"
+set_number = "10"
 
 # import datasets
 train = pd.read_csv(dir_path + '/' + 'train.csv')
