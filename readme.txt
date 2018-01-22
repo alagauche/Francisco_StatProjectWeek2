@@ -1,3 +1,7 @@
+Name: Francisco McGee
+Assignment: Stats Project, Week2
+Github: https://github.com/alagauche/Francisco_StatProjectWeek2
+
 NOTE ON SCALABILITY/LIMITATIONS
 Currently, pipeline must be run manually due to current scaling limitations.
 These can be resolved shortly. 
