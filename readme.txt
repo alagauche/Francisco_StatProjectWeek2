@@ -2,19 +2,38 @@ Name: Francisco McGee
 Assignment: Stats Project, Week2
 Github: https://github.com/alagauche/Francisco_StatProjectWeek2
 
-NOTE ON SCALABILITY/LIMITATIONS
-Currently, pipeline must be run manually due to current scaling limitations.
-These can be resolved shortly. 
-toxic_comments_nbsvm.py is the main culprit.
-In the meantime, this function will stress a computer with 16GB memory.
-Only by halving the dataset was I able to run it locally.
+OVERVIEW
+This project takes comments from Wikipedia talk page edits and classifies each comment by toxicity in the following categories:
+    1) toxic
+    2) severely toxic
+    3) insult
+    4) obscene
+    5) threat
+    6) identity_hate
+The predictive model used to classify the comments is NBSVM, naive bayes support vector machines.
+
 
 SOURCE OF ALGORITHM, NBSVM
-I took this NBSVM (naive bayes support vector machines) implementation from Kaggle:
+I took this NBSVM (naive bayes support vector machines) implementation from a Kaggle competition kernel:
 Specific NBSVM implementation, by Jeremy Howard:
     https://www.kaggle.com/jhoward/nb-svm-strong-linear-baseline-eda-0-052-lb   
-Kaggle Challenge Homepage
+Kaggle Challenge Homepage, Toxic Comment Classification Challenge
     https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
+Academic paper introducing NBSVM 
+    https://nlp.stanford.edu/pubs/sidaw12_simple_sentiment.pdf
+
+
+NOTE ON SCALABILITY/LIMITATIONS
+Currently, pipeline must be run manually due to current memory scaling limitations during model construction.
+The file toxic_comments_nbsvm.py runs the model, and is the main culprit in scaling limitation.
+In the meantime, this function will stress a computer with 16GB memory.
+Only by halving the dataset was I able to run it locally running a single model.
+
+
+WORKFLOW
+The workflow needs to be run 10 times from steps 2-4 in order to cross-validate. Automated 10-fold cross-validation is currently precluded by scaling limitations.
+
+
 
 HOW TO RUN THE CODE
 Run these files in order:
