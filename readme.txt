@@ -13,6 +13,10 @@ This project takes comments from Wikipedia talk page edits and classifies each c
 The predictive model used to classify the comments is NBSVM, naive bayes support vector machines.
 
 
+PRESENTATIONS
+Please refer to the two PDF presentations for a more in depth look at the projedt: stats_project_overview and stats_project_technical.
+
+
 SOURCE OF ALGORITHM, NBSVM
 I took this NBSVM (naive bayes support vector machines) implementation from a Kaggle competition kernel:
 Specific NBSVM implementation, by Jeremy Howard:
